@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment One</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom/mystyle.css">
+</head>
+
+<body>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button style="color: #1890ff;padding-left: 18px;padding-right: 18px;" class="nav-link active" id="wave-tab"
+        data-bs-toggle="tab" data-bs-target="#wavepay" type="button" role="tab" aria-controls="wavepay"
+        aria-selected="true">
+        Wavepay
+      </button>
+    </li>
+    <!-- <li class="nav-item" role="presentation">
+          <button class="nav-link" id="kbz-tab" data-bs-toggle="tab" data-bs-target="#kbzpay" type="button" role="tab" aria-controls="kbzpay" aria-selected="false">
+            KBZPay
+          </button>
+        </li> -->
+
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="wavepay" role="tabpanel" aria-labelledby="wave-tab">
+
+      <div class="px-lg-5 my-3">
+        <div class="">
+          <div class="">
+            <div class="container-fluid">
+              <form action="complete.html">
+                <div class="rounded-3 p-4 wave-bg mb-3">
+                  <!-- <ul class="list-style-none">
+                               <li> <label class="fw-bold">Total Amount Payable</label>：50000</li>
+                               <li>  <label class="fw-bold">Name</label> ：kay zin htet </li>
+                                <li><label class="fw-bold"> Mobile</label>：9756470664</li>
+                            </ul>
+                            <p class="small">Please fill in all repayment information to help you get the loan again quickly.</p> -->
+
+                  <div class="rounded-3 form-bg p-3 mb-3">
+                    <div class="row">
+                      <label for="transaction-id" class="col-5 col-sm-2 col-form-label">
+                        * Transaction ID:
+                      </label>
+                      <div class="col-7 col-sm-10 ps-0">
+                        <input type="text" autocomplete="off" class="form-control" id="transaction-id"
+                          placeholder="Please Input" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-3 form-bg p-3 mb-3">
+                    <div class="row">
+                      <label for="repayment-amount" class="col-5 col-sm-2 col-form-label">
+                        Repayment Amount::
+                      </label>
+                      <div class="col-7 col-sm-10 ps-0">
+                        <input type="text" class="form-control" id="repayment-amount" placeholder="Please Input">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="rounded-3 form-bg p-3">
+                    <div class="row">
+                      <label for="repayment-account" class="col-5 col-sm-2 col-form-label">
+                        Official repayment wallet account:
+                      </label>
+                      <div class="col-7 col-sm-10 ps-0">
+                        <input type="text" id="repayment-account" class="form-control" placeholder="Please Input">
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="rounded-3 p-4 wave-bg mb-3">
+                  <p class="text-center fw-bold">Official repayment wallet account</p>
+                  <p>
+                    You can access the wallet and repay the loan anytime. After the repayment is completed, please fill
+                    in the repayment amount and Transaction ID, so as to help you get into your account faster.
+                    <br>
+                    <span class="text-danger fw-bold">Please do not transfer money using wallets other than WavePay, as
+                      it may result in the loss of funds. </span>
+                    <br>
+                    The following accounts will be refreshed after <span
+                      class="text-primary fw-bold countdownTimer">13:26</span>
+                  </p>
+
+                  <div class="row mb-3">
+                    <div class="col-9">
+                      <div class="rounded-3 form-bg2 p-3">
+                        <div class="row">
+                          <div class="col-5 col-lg-7">
+                            <h4 class="text-center">
+                              WavePay
+                            </h4>
+                          </div>
+                          <div class="col-7 col-lg-5">
+                            <h4 class="text-center" id="numOne">
+                              09778953013
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" onclick="copyData(numOne)" class="btn btn-default copy-btn">Copy</button>
+
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-9">
+                      <div class="rounded-3 form-bg2 p-3">
+                        <div class="row">
+                          <div class="col-5 col-lg-7">
+                            <h4 class="text-center">
+                              WavePay
+                            </h4>
+                          </div>
+                          <div class="col-7 col-lg-5">
+                            <h4 class="text-center" id="numTwo">
+                              09799761973
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" onclick="copyData(numTwo)" class="btn btn-default copy-btn">Copy</button>
+
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-9">
+                      <div class="rounded-3 form-bg2 p-3">
+                        <div class="row">
+                          <div class="col-5 col-lg-7">
+                            <h4 class="text-center">
+                              WavePay
+                            </h4>
+                          </div>
+                          <div class="col-7 col-lg-5">
+                            <h4 class="text-center" id="numThree">
+                              09761428547 
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" onclick="copyData(numThree)" class="btn btn-default copy-btn">Copy</button>
+
+                    </div>
+                  </div>
+
+
+                  <!-- <div class="row">
+                    <div class="col-9">
+                      <div class="rounded-3 form-bg2 p-3">
+                        <div class="row">
+                          <div class="col-5 col-lg-7">
+                            <h5 class="m-0 fw-bold">URL</h5>
+                          </div>
+                          <div class="col-7 col-lg-5">
+                            <p class="m-0 p-0" id="copyurl" style="word-break: break-all;">
+                              https://mgaungthu.github.io/payment/
+                            </p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" onclick="copyData(copyurl)" class="btn btn-default copy-btn">Copy</button>
+
+                    </div>
+                  </div> -->
+
+
+                </div>
+                <button type="submit" class="btn btn-default submit-btn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="tab-pane fade" id="kbzpay" role="tabpanel" aria-labelledby="kbz-tab">
+                <div class="px-5 my-3">
+                    <div class="row">
+                      <div class="col">
+                        kbzpay
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+  </div>
+
+  <div class="my-toast" style="display: none;">
+    Copy to clipboard
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <script>
+    function copyData(containerid) {
+      var range = document.createRange();
+      range.selectNode(containerid); //changed here
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      $(".my-toast").show();
+      setTimeout(function () {
+        $('.my-toast').fadeOut();
+      }, 1000); // <-- time in milliseconds
+
+    }
+
+
+  </script>
+
+  <script>
+    function countdown(minutes) {
+      let seconds = minutes * 60;
+
+      const countdownInterval = setInterval(() => {
+        const minutesDisplay = Math.floor(seconds / 60);
+        const secondsDisplay = seconds % 60;
+
+        // console.log(``);
+
+        $(".countdownTimer").html(`${minutesDisplay}:${secondsDisplay < 10 ? '0' : ''}${secondsDisplay}`)
+
+        if (seconds === 0) {
+          clearInterval(countdownInterval);
+          console.log("Countdown finished!");
+        }
+
+        seconds--;
+      }, 1000);
+    }
+
+    countdown(15);
+  </script>
+
+</body>
+
+</html>
